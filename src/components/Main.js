@@ -10,8 +10,8 @@ function Main(){
         fetch(`http://makeup-api.herokuapp.com/api/v1/products.json`)
         .then(res=>res.json())
         .then(data=>{
-            setCharData(data)
-            console.log(data)
+            console.log(data);
+            setCharData(data);
         });
     };
     return(
