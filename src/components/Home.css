@@ -1,0 +1,8 @@
+.welcome {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+  background-size: cover;
+  background-image: url(../assets/images/welcome_image.jpg);
+}
