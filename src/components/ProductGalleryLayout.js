@@ -9,12 +9,19 @@ const ProductGalleryLayout = () => {
     const [productData, setProductData] = useState(null);
     const [brandData, setBrandData] = useState(null);
     const [selectedBrands, setSelectedBrands] = useState([]);
+    const [productTypes, setProductTypes] = useState(null);
+    const [selectedProductTypes, setSelectedProductTypes] = useState([]);
 
     const chooseBrands = (brands) => {
         setSelectedBrands(brands);
     }
 
+    const chooseProductTypes = (productTypes) => {
+        setSelectedProductTypes(productTypes);
+    }
+
     const fetchProductData = () => {
+        // selected only few product types
         const eyeShadow = `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeshadow`;
         const blush = `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=blush`;
         const eyeliner = `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeliner`;
@@ -33,11 +40,13 @@ const ProductGalleryLayout = () => {
             fetch(nailPolish).then(response => response.json())
         ])
             .then(results => {
+                // selected results where more picture are available to display and taken few products only. 
                 const combined = [...results[0].slice(13, 30), ...results[1].slice(5, 30), ...results[2].slice(1, 25), ...results[3].slice(6, 30), ...results[4].slice(12, 30), ...results[5].slice(3, 30), ...results[6].slice(15, 30)];
-                console.log(combined);
                 setProductData(combined);
                 const brands = [...new Set(combined.map(q => q.brand))];
                 setBrandData(brands);
+                const productTypes = [...new Set(combined.map(q => q.product_type))];
+                setProductTypes(productTypes);
             })
             .catch(error => {
                 console.error(error);
@@ -57,10 +66,10 @@ const ProductGalleryLayout = () => {
     return (
         <div className="layout">
             <div className="side-bar">
-                <SideBar brands={brandData} chooseBrands={chooseBrands} />
+                <SideBar brands={brandData} chooseBrands={chooseBrands} productTypes={productTypes} chooseProductTypes={chooseProductTypes} />
             </div>
             <div className="product-body">
-                <ProductGallery productData={productData} selectedBrands={selectedBrands} />
+                <ProductGallery productData={productData} selectedBrands={selectedBrands} selectedProductTypes={selectedProductTypes} />
             </div>
         </div>
     );

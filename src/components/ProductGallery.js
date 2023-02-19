@@ -5,7 +5,6 @@ import './ProductGallery.css';
 
 const ProductGallery = (props) => {
 
-    console.log(props.selectedBrands);
     const [searchText, setSearchText] = useState('');
 
 
@@ -15,13 +14,22 @@ const ProductGallery = (props) => {
 
     const filteredProducts = () => {
         let products = searchText ? props.productData.filter(product => product.name.toLowerCase().includes(searchText.toLowerCase())) : props.productData;
+        products = props.selectedProductTypes.length > 0 ? products.filter(item => props.selectedProductTypes.includes(item.product_type)) : products;
         products = props.selectedBrands.length > 0 ? products.filter(item => props.selectedBrands.includes(item.brand)) : products;
         return products;
     }
 
+    if (filteredProducts().length === 0) {
+        return (
+            <div className='container show-middle'>No products found to display</div>
+        );
+    }
+
     return (
-        <div>
-            <input type="text" value={searchText} onChange={handleSearchChange} placeholder="Search for product name" className="search-bar" />
+        <div className='container'>
+            <div className='textbox'>
+                <input type="text" value={searchText} onChange={handleSearchChange} placeholder="Search for product name" className="search-bar" />
+            </div>
             <div className="product-gallery">
                 {
                     filteredProducts().map(product => (
@@ -30,7 +38,7 @@ const ProductGallery = (props) => {
                 }
             </div>
         </div>
-    )
+    );
 }
 
 

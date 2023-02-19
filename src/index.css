@@ -15,7 +15,7 @@ code {
 
 @media (max-width: 992px) {
   .product-gallery {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .product {
@@ -29,5 +29,9 @@ code {
 
   .product-body {
     width: 100% !important;
+  }
+
+  .search-bar {
+    font-size: larger !important;
   }
 }
