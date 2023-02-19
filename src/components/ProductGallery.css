@@ -3,4 +3,39 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 2rem;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.search-bar {
+    width: 99%;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.2s ease-in-out;
+    font-size: xx-large;
+    color: darkslategray;
+}
+
+.search-bar::placeholder {
+    color: lightgray;
+}
+
+.search-bar:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 1rem);
+}
+
+.show-middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    color: darkslategray;
 }
