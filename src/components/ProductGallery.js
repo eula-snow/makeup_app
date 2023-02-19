@@ -1,38 +1,35 @@
-import React, { useEffect, useState } from "react";
+import { useState } from 'react';
 import Product from './Product';
 import './ProductGallery.css';
 
 
-const ProductGallery = () => {
-    const [productData, setProductData] = useState(null);
+const ProductGallery = (props) => {
 
-    const fetchProductData = () => {
-        fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=nail_polish`)
-            .then(res => res.json())
-            .then(data => {
-                let products = data.slice(14, 30);
-                console.log(products);
-                setProductData(products);
-            });
+    console.log(props.selectedBrands);
+    const [searchText, setSearchText] = useState('');
+
+
+    const handleSearchChange = event => {
+        setSearchText(event.target.value);
+    };
+
+    const filteredProducts = () => {
+        let products = searchText ? props.productData.filter(product => product.name.toLowerCase().includes(searchText.toLowerCase())) : props.productData;
+        products = props.selectedBrands.length > 0 ? products.filter(item => props.selectedBrands.includes(item.brand)) : products;
+        return products;
     }
-
-    useEffect(() => {
-        fetchProductData()
-    }, [])
-
-    if (productData === null) {
-        return null;
-    }
-
 
     return (
-        <div className="product-gallery">
-            {
-                productData.map(product => (
-                    <Product key={product.id} product={product} />
-                ))}
+        <div>
+            <input type="text" value={searchText} onChange={handleSearchChange} placeholder="Search for product name" className="search-bar" />
+            <div className="product-gallery">
+                {
+                    filteredProducts().map(product => (
+                        <Product key={product.id} product={product} />
+                    ))
+                }
+            </div>
         </div>
-
     )
 }
 

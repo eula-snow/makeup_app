@@ -22,4 +22,12 @@ code {
     width: 100% !important;
     margin: 0 0 1rem 0 !important;
   }
+
+  .side-bar {
+    display: none !important;
+  }
+
+  .product-body {
+    width: 100% !important;
+  }
 }

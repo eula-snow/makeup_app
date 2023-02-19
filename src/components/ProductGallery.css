@@ -4,3 +4,22 @@
     justify-content: center;
     padding: 2rem;
 }
+
+.search-bar {
+    width: 99%;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.2s ease-in-out;
+    font-size: xx-large;
+    color: darkslategray;
+}
+
+.search-bar::placeholder {
+    color: lightgray;
+}
+
+.search-bar:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}

@@ -18,12 +18,12 @@ const Product = (props) => {
             <div>
                 <img src={imageSrc} alt={props.product.name} onError={handleImageError} />
             </div>
-            <div class="product-des">
-                {props.product.description.slice(0, 100)}
+            <div className="product-des">
+                {props.product.description ? props.product.description.slice(0, 100) : ''}
             </div>
             <div className='product-price'>£{props.product.price}</div>
 
-            <a href={props.product.website_link} target="_blank">Product Website</a>
+            <a href={props.product.website_link} target="_blank" rel="noreferrer">Product Website</a>
         </div>
     );
 }
