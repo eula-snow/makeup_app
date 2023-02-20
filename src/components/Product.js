@@ -11,7 +11,7 @@ const Product = (props) => {
 
   const checkout = () => {
     let checkoutList = JSON.parse(localStorage.getItem("checkoutList")) ?? [];
-    checkoutList.push(props.product.id);
+    checkoutList.push([props.product.name, props.product.brand]);
     localStorage.setItem("checkoutList", JSON.stringify(checkoutList));
   };
 

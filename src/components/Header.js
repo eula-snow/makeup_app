@@ -1,9 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
 
 function Header() {
-  const [listOfProductIDs, setListOfProductIDs] = useState([]);
+  const [listOfProductNames, setListOfProductNames] = useState([]);
 
   const [show, setShow] = useState(false);
 
@@ -11,7 +11,7 @@ function Header() {
   const handleShow = () => setShow(true);
   const showCheckout = () => {
     const checkoutList = JSON.parse(localStorage.getItem("checkoutList")) ?? [];
-    setListOfProductIDs(checkoutList);
+    setListOfProductNames(checkoutList);
     handleShow();
   };
 
@@ -34,12 +34,17 @@ function Header() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+          <Modal.Title>Favourites</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <ul>
-            <li>asdsa</li>
-            <li>qwewewq</li>
+            {listOfProductNames.map((productName) => {
+              return (
+                <li key={productName[0]}>
+                  {productName[1] + " - " + productName[0]}
+                </li>
+              );
+            })}
           </ul>
         </Modal.Body>
       </Modal>
