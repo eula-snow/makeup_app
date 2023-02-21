@@ -16,6 +16,12 @@ function Header() {
     handleShow();
   };
 
+  const clearCheckout = () => {
+    localStorage.clear();
+    // alert('All Checkout items cleared!');
+    showCheckout();
+  }
+
   return (
     <div>
       <header>
@@ -24,7 +30,7 @@ function Header() {
           <NavLink id='home' to="/">Home</NavLink>
           <NavLink id='main'to="/Main">Main</NavLink>
         </nav>
-        <button id='btn' onClick={showCheckout}>Check out</button>
+
       </header>
 
       <Modal
