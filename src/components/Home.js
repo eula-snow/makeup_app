@@ -3,6 +3,7 @@ import Header from "./Header";
 import "./Home.css";
 import Product from "./Product";
 import { useNavigate } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 function Home() {
   const [charData, setCharData] = useState(null);
@@ -10,20 +11,7 @@ function Home() {
 
   const brands = ["nyx", "maybelline", "dior", "glossier", "l'oreal"];
   let randomBrand = brands[Math.floor(Math.random() * brands.length)];
-  //   const productTypes = [
-  //     "blush",
-  //     "bronzer",
-  //     "eyebrow",
-  //     "eyeliner",
-  //     "eyeshadow",
-  //     "foundation",
-  //     "lip_liner",
-  //     "lipstick",
-  //     "mascara",
-  //     "nail_polish",
-  //   ];
-  //   let randomProductType =
-  //     productTypes[Math.floor(Math.random() * productTypes.length)];
+
   useEffect(() => {
     fetch(
       `http://makeup-api.herokuapp.com/api/v1/products.json?brand=${randomBrand}`
@@ -51,9 +39,9 @@ function Home() {
         <h1 id="discover">Discover new make-up with Make Up App</h1>
       </div>
       <div>
-        <button id="search" onClick={routeChange}>
+        <Button variant="outline-secondary" id="search" onClick={routeChange}>
           Search for Products
-        </button>
+        </Button>{" "}
         <p id="description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non leo
           at justo facilisis bibendum non vel erat. Quisque sed imperdiet erat,
