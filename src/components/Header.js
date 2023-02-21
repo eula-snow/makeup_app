@@ -19,6 +19,8 @@ function Header() {
         <nav>
           <NavLink id='home' to="/">Home</NavLink>
           <NavLink id='main' to="/Main">Main</NavLink>
+          <NavLink id='contact' to="/contact">Contact</NavLink>
+          
         </nav>
         <button id='btn' onClick={showCheckout}>Check out</button>
       </header>
