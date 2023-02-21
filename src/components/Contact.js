@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import "./Contact.css";
+
 
 function Contact() {
   const [success, setSuccess] = useState(false);
@@ -50,7 +52,7 @@ function Contact() {
   };
   return (
     <>
-      <h1 id='contactMe'> Contact Me</h1>
+      <h1 id='contactMe'> Contact Us</h1>
       
 
       <form onSubmit={handleSubmit}>
