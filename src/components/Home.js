@@ -32,11 +32,10 @@ function Home() {
     navigate(path);
   };
   if (charData === null) {
-    return null;
+    return <div className="container show-middle">Loading...</div>
   }
   return (
     <>
-      <Header />
       <div className="welcome">
         <h1 id="discover">Discover new make-up with Make Up App</h1>
       </div>

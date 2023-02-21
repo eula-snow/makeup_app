@@ -1,5 +1,3 @@
-
-
 import { useState } from "react";
 import "./Footer.css";
 import Button from "react-bootstrap/Button";

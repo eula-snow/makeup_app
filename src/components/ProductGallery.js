@@ -14,14 +14,14 @@ const ProductGallery = (props) => {
   const filteredProducts = () => {
     let products = searchText
       ? props.productData.filter((product) =>
-          product.name.toLowerCase().includes(searchText.toLowerCase())
-        )
+        product.name.toLowerCase().includes(searchText.toLowerCase())
+      )
       : props.productData;
     products =
       props.selectedProductTypes.length > 0
         ? products.filter((item) =>
-            props.selectedProductTypes.includes(item.product_type)
-          )
+          props.selectedProductTypes.includes(item.product_type)
+        )
         : products;
     products =
       props.selectedBrands.length > 0
@@ -32,14 +32,24 @@ const ProductGallery = (props) => {
 
   if (filteredProducts().length === 0) {
     return (
-      <div className="container show-middle">No products found to display</div>
+      <>
+        <div className="textbox">
+          <input
+            type="text"
+            value={searchText}
+            onChange={handleSearchChange}
+            placeholder="Search for product name"
+            className="search-bar"
+          />
+        </div>
+        <div className="wrapper show-middle">No products found to display</div>
+      </>
     );
   }
 
   return (
     <>
-      <Header></Header>
-      <div className="container">
+      <div className="wrapper">
         <div className="textbox">
           <input
             type="text"
@@ -55,7 +65,6 @@ const ProductGallery = (props) => {
           ))}
         </div>
       </div>
-      <Footer></Footer>
     </>
   );
 };
