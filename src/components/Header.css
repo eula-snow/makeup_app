@@ -2,13 +2,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: pink;
+    background-color: rgb(240, 194, 201);
     font-size: medium;
-    color: blueviolet
+    color: blueviolet;
+    height: 55px;
 }
 
 header h1 {
     margin-left: 10px;
+    font-size: xx-large;
 }
 
 #home,

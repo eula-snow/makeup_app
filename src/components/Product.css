@@ -8,6 +8,7 @@
     border-radius: 5px;
     border: 1px solid #e2e2e2;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .product:hover .product-des {
@@ -48,13 +49,16 @@
 .product-des {
     width: 100%;
     padding: 0.5rem;
-    background-color: #f2f2f2;
-    border: 1px solid #e2e2e2;
+    background-color: rgba(0, 0, 0, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
-    display: block;
-    color: brown;
+    display: none;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .product-buy {
@@ -62,6 +66,9 @@
     justify-content: space-between;
     width: 100%;
     padding: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .product-buy div span {
