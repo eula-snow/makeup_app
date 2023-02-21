@@ -24,10 +24,13 @@ function Header() {
           <h1>Make-Up App</h1>
         </div>
         <div className="nav-bar">
-          <NavLink id='home' to="/">Home</NavLink>
-          <NavLink id='main' to="/Main">Main</NavLink>
+          <nav>
+            <NavLink id='home' to="/">Home</NavLink>
+            <NavLink id='main' to="/Main">Main</NavLink>
+            <NavLink id='contact' to="/contact">Contact</NavLink>
+          </nav>
           <div>
-            <button className='bt' onClick={showCheckout}><i class="fa-thin fa-user"></i>Basket</button>
+            <button className='bt' onClick={showCheckout}>Basket</button>
           </div>
           <div>
             <button className='bt' onClick={clearCheckout}>Clear Basket</button>
