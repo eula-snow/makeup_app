@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    
+}
+
+a {
+    color: black;
+    margin: 1em;
+    text-decoration: none;
+
+}
+
+a.active {
+    text-decoration: underline;
+
+}
+
+nav {
+    margin-left: 800px;
+    
+}
+
+#btn {
+    margin-right: 5%;
+}
+
+#logo {
+    margin-left: 2%;
+}
