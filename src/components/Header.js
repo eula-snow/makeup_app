@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
+import './Header.css'
 
 function Header() {
   const [listOfProductNames, setListOfProductNames] = useState([]);
@@ -24,13 +25,11 @@ function Header() {
   return (
     <div>
       <header>
-        <h1>Make Up App</h1>
+        <h1 id='logo'>Make Up App</h1>
         <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/Main">Main</NavLink>
+          <NavLink id='home' to="/">Home</NavLink>
+          <NavLink id='main'to="/Main">Main</NavLink>
         </nav>
-        <button onClick={showCheckout}>Check out</button>
-        <button onClick={clearCheckout}>Clear</button>
 
       </header>
 

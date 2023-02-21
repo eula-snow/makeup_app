@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import Header from "./Header";
+import Footer from "./Footer";
 import "./Home.css";
 import Product from "./Product";
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
+import Carousel from "react-bootstrap/Carousel";
 
 function Home() {
   const [charData, setCharData] = useState(null);
@@ -57,13 +59,52 @@ function Home() {
         </p>
       </div>
       <div>
-        <h2 id="check">Check out these products</h2>
+        <h2 id="check">Meet the Brands</h2>
       </div>
+      <Carousel>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 carImg"
+            src={require("../assets/images/lip.avif")}
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h3>Dior</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 carImg"
+            src={require("../assets/images/lip.avif")}
+            alt="Second slide"
+          />
+
+          <Carousel.Caption>
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 carImg"
+            src={require("../assets/images/lip.avif")}
+            alt="Third slide"
+          />
+
+          <Carousel.Caption>
+            <h3>Third slide label</h3>
+            <p>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
       <section>
-        {charData.map((product) => (
+        {/* {charData.map((product) => (
           <Product key={product.id} product={product} />
-        ))}
+        ))} */}
       </section>
+      <Footer></Footer>
     </>
   );
 }

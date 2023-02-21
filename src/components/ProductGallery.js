@@ -2,6 +2,7 @@ import { useState } from "react";
 import Product from "./Product";
 import "./ProductGallery.css";
 import Header from "./Header";
+import Footer from "./Footer";
 
 const ProductGallery = (props) => {
   const [searchText, setSearchText] = useState("");
@@ -54,6 +55,7 @@ const ProductGallery = (props) => {
           ))}
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 };
