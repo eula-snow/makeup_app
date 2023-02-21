@@ -6,7 +6,6 @@ import "./App.css";
 import ProductGalleryLayout from "./components/ProductGalleryLayout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MainLayout from "./components/MainLayout";
-import Footer from "./components/Footer";
 
 
 
