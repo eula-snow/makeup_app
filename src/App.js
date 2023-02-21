@@ -14,6 +14,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/contact" element={<Contact />} />
           <Route path="/" element={<Home />} />

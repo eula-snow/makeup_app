@@ -12,17 +12,30 @@ function Header() {
     setListOfProductNames(checkoutList);
     handleShow();
   };
+
+  const clearCheckout = () => {
+    localStorage.clear();
+    showCheckout();
+  }
   return (
     <div>
       <header>
-        <h1 id='logo'>Make Up App</h1>
-        <nav>
-          <NavLink id='home' to="/">Home</NavLink>
-          <NavLink id='main' to="/Main">Main</NavLink>
-          <NavLink id='contact' to="/contact">Contact</NavLink>
-          
-        </nav>
-        <button id='btn' onClick={showCheckout}>Check out</button>
+        <div>
+          <h1>Make-Up App</h1>
+        </div>
+        <div className="nav-bar">
+          <nav>
+            <NavLink id='home' to="/">Home</NavLink>
+            <NavLink id='main' to="/Main">Main</NavLink>
+            <NavLink id='contact' to="/contact">Contact</NavLink>
+          </nav>
+          <div>
+            <button className='bt' onClick={showCheckout}>Basket</button>
+          </div>
+          <div>
+            <button className='bt' onClick={clearCheckout}>Clear Basket</button>
+          </div>
+        </div>
       </header>
       <Modal
         show={show}

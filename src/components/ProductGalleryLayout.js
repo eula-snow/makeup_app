@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import Header from "./Header";
 import ProductGallery from "./ProductGallery";
 import "./ProductGalleryLayout.css";
 import SideBar from "./SideBar";
+
 
 const ProductGalleryLayout = () => {
   const [productData, setProductData] = useState(null);
@@ -64,27 +66,29 @@ const ProductGalleryLayout = () => {
   }, []);
 
   if (productData === null) {
-    return null;
+    return <div className="wrapper show-middle">Loading...</div>
   }
 
   return (
-    <div className="layout">
-      <div className="side-bar">
-        <SideBar
-          brands={brandData}
-          chooseBrands={chooseBrands}
-          productTypes={productTypes}
-          chooseProductTypes={chooseProductTypes}
-        />
+    <>
+      <div className="layout">
+        <div className="side-bar">
+          <SideBar
+            brands={brandData}
+            chooseBrands={chooseBrands}
+            productTypes={productTypes}
+            chooseProductTypes={chooseProductTypes}
+          />
+        </div>
+        <div className="product-body">
+          <ProductGallery
+            productData={productData}
+            selectedBrands={selectedBrands}
+            selectedProductTypes={selectedProductTypes}
+          />
+        </div>
       </div>
-      <div className="product-body">
-        <ProductGallery
-          productData={productData}
-          selectedBrands={selectedBrands}
-          selectedProductTypes={selectedProductTypes}
-        />
-      </div>
-    </div>
+    </>
   );
 };
 

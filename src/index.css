@@ -12,6 +12,14 @@ code {
     monospace;
 }
 
+.show-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  color: darkslategray;
+}
+
 
 @media (max-width: 992px) {
   .product-gallery {

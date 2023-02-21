@@ -2,29 +2,51 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5px;
-    
+    background-color: pink;
+    font-size: medium;
+    color: blueviolet
 }
 
-a {
+header h1 {
+    margin-left: 10px;
+}
+
+#home,
+#main,
+#contact {
     color: black;
-    margin: 1em;
     text-decoration: none;
-
+    color: blueviolet;
+    font-size: large;
 }
 
-a.active {
+
+.bt {
+    font-size: large;
+    color: blueviolet;
+}
+
+#home:hover,
+#main:hover,
+#contact:hover {
     text-decoration: underline;
 
 }
 
-nav {
-    margin-left: 800px;
-    
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-#btn {
-    margin-right: 5%;
+.nav-bar div,
+.nav-bar nav,
+.nav-bar nav * {
+    margin-right: 20px;
+}
+
+.nav-bar div:last-child {
+    margin-right: 10px;
 }
 
 #logo {

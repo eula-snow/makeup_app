@@ -18,7 +18,6 @@ const Product = (props) => {
   return (
     <div className="product">
       <div className="product-name">{props.product.name}</div>
-      <button onClick={checkout}>Add</button>
       <div className="product-info">
         <div>Brand: {props.product.brand}</div>
         <div>Product Type: {props.product.product_type}</div>
@@ -35,11 +34,15 @@ const Product = (props) => {
           ? props.product.description.slice(0, 100)
           : ""}
       </div>
-      <div className="product-price">£{props.product.price}</div>
-
-      <a href={props.product.website_link} target="_blank" rel="noreferrer">
-        Product Website
-      </a>
+      <div className="product-buy">
+        <a href={props.product.website_link} target="_blank" rel="noreferrer">
+          Visit Website
+        </a>
+        <div>
+          <span className="product-price">£{props.product.price}</span>
+          <button onClick={checkout}>Buy</button>
+        </div>
+      </div>
     </div>
   );
 };
