@@ -30,10 +30,10 @@ function Header() {
             <NavLink id='contact' to="/contact">Contact</NavLink>
           </nav>
           <div>
-            <button className='bt' onClick={showCheckout}>Basket</button>
+            <button className='bt' onClick={showCheckout}>Cart <i class="fa-solid fa-basket-shopping"></i></button>
           </div>
           <div>
-            <button className='bt' onClick={clearCheckout}>Clear Basket</button>
+            <button className='bt' onClick={clearCheckout}>Clear <i class="fa-solid fa-trash"></i></button>
           </div>
         </div>
       </header>

@@ -42,13 +42,13 @@ const ProductGalleryLayout = () => {
       .then((results) => {
         // selected results where more picture are available to display and taken few products only.
         const combined = [
-          ...results[0].slice(13, 30),
-          ...results[1].slice(5, 30),
-          ...results[2].slice(1, 25),
-          ...results[3].slice(6, 30),
-          ...results[4].slice(12, 30),
-          ...results[5].slice(3, 30),
-          ...results[6].slice(15, 30),
+          ...results[0].slice(13, 20),
+          ...results[1].slice(5, 10),
+          ...results[2].slice(1, 15),
+          ...results[3].slice(6, 15),
+          ...results[4].slice(12, 20),
+          ...results[5].slice(3, 10),
+          ...results[6].slice(15, 25),
         ];
         setProductData(combined);
         const brands = [...new Set(combined.map((q) => q.brand))];
