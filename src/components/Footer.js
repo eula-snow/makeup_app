@@ -27,3 +27,5 @@ function Footer() {
     </Form>
   );
 }
+
+export default Footer;
