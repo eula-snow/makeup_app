@@ -87,7 +87,7 @@ function Home() {
         <Carousel.Item>
           <img
             className="d-block w-100 carImg"
-            src={require("../assets/images/lip.avif")}
+            src={require("../assetsimagesphoto-1593939534231-4737a05c809e.avif")}
             alt="Third slide"
           />
 
