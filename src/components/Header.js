@@ -2,12 +2,9 @@ import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
 import './Header.css'
-
 function Header() {
   const [listOfProductNames, setListOfProductNames] = useState([]);
-
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const showCheckout = () => {
@@ -15,24 +12,16 @@ function Header() {
     setListOfProductNames(checkoutList);
     handleShow();
   };
-
-  const clearCheckout = () => {
-    localStorage.clear();
-    // alert('All Checkout items cleared!');
-    showCheckout();
-  }
-
   return (
     <div>
       <header>
         <h1 id='logo'>Make Up App</h1>
         <nav>
           <NavLink id='home' to="/">Home</NavLink>
-          <NavLink id='main'to="/Main">Main</NavLink>
+          <NavLink id='main' to="/Main">Main</NavLink>
         </nav>
-
+        <button id='btn' onClick={showCheckout}>Check out</button>
       </header>
-
       <Modal
         show={show}
         onHide={handleClose}
@@ -58,5 +47,4 @@ function Header() {
     </div>
   );
 }
-
 export default Header;
