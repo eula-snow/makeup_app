@@ -36,7 +36,7 @@ function Header() {
                 Home
               </NavLink>
               <NavLink id="main" to="/Main">
-                Main
+                Products
               </NavLink>
               <NavLink id="contact" to="/contact">
                 Contact

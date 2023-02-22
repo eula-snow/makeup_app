@@ -8,7 +8,7 @@ export const FooterComponent = () => {
   return (
     <Container>
       <Row className="justify-content-md-between">
-        <Col md="4">
+        <Col md="4" className="email">
           <Card style={{ width: "18rem" }}>
             <Card.Body>
               <Card.Text>EMAIL: makeup_app@gmail.com</Card.Text>
@@ -16,14 +16,14 @@ export const FooterComponent = () => {
           </Card>
         </Col>
 
-        <Col md="4">
+        <Col md="4" className="phone">
           <Card style={{ width: "18rem" }}>
             <Card.Body>
               <Card.Text>PHONE: 0880500500</Card.Text>
             </Card.Body>
           </Card>
         </Col>
-        <Col md="4">
+        <Col md="4" className="address">
           <Card style={{ width: "18rem" }}>
             <Card.Body>
               <Card.Text>ADDRESS: 22 Bridge Street, London</Card.Text>
@@ -31,6 +31,14 @@ export const FooterComponent = () => {
           </Card>
         </Col>
       </Row>
+      <div className="social-links">
+        <a href=""><i className="fa fa-twitter"></i></a>
+        <a href=""><i className="fa fa-instagram"></i></a>
+        <a href=""><i className="fa fa-facebook"></i></a>
+      </div>
     </Container>
   );
 };
+
+
+export default FooterComponent;
