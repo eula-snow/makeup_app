@@ -22,13 +22,13 @@ const ProductGalleryLayout = () => {
 
   const fetchProductData = () => {
     // selected only few product types
-    const eyeShadow = `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeshadow`;
-    const blush = `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=blush`;
-    const eyeliner = `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeliner`;
-    const foundation = `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=foundation`;
-    const lipstick = `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=lipstick`;
-    const lipliner = `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=lip_liner`;
-    const nailPolish = `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=nail_polish`;
+    const eyeShadow = `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeshadow`;
+    const blush = `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=blush`;
+    const eyeliner = `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeliner`;
+    const foundation = `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=foundation`;
+    const lipstick = `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=lipstick`;
+    const lipliner = `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=lip_liner`;
+    const nailPolish = `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=nail_polish`;
 
     Promise.all([
       fetch(eyeShadow).then((response) => response.json()),

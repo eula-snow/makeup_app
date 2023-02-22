@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Header from "./Header";
-import Footer from "./Footer";
+import { FooterComponent } from "./Footer";
 import "./Home.css";
 import Product from "./Product";
 import { useNavigate } from "react-router-dom";
@@ -17,7 +17,7 @@ function Home() {
 
   // useEffect(() => {
   //   // fetch(
-  //   //   `http://makeup-api.herokuapp.com/api/v1/products.json?brand=${randomBrand}`
+  //   //   `https://makeup-api.herokuapp.com/api/v1/products.json?brand=${randomBrand}`
   //   // )
   //   //   .then((res) => res.json())
   //   //   .then((data) => {
@@ -96,7 +96,7 @@ function Home() {
           <Product key={product.id} product={product} />
         ))} */}
       </section>
-      <Footer></Footer>
+      <FooterComponent></FooterComponent>
     </>
   );
 }
