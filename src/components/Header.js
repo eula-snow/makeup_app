@@ -1,7 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
-import './Header.css'
+import Button from "react-bootstrap/Button";
+import "./Header.css";
 function Header() {
   const [listOfProductNames, setListOfProductNames] = useState([]);
   const [show, setShow] = useState(false);
@@ -16,7 +17,7 @@ function Header() {
   const clearCheckout = () => {
     localStorage.clear();
     showCheckout();
-  }
+  };
   return (
     <div>
       <header>
@@ -25,15 +26,33 @@ function Header() {
         </div>
         <div className="nav-bar">
           <nav>
-            <NavLink id='home' to="/">Home</NavLink>
-            <NavLink id='main' to="/Main">Main</NavLink>
-            <NavLink id='contact' to="/contact">Contact</NavLink>
+            <NavLink id="home" to="/">
+              Home
+            </NavLink>
+            <NavLink id="main" to="/Main">
+              Main
+            </NavLink>
+            <NavLink id="contact" to="/contact">
+              Contact
+            </NavLink>
           </nav>
           <div>
-            <button className='bt' onClick={showCheckout}>Cart <i class="fa-solid fa-basket-shopping"></i></button>
+            <Button
+              variant="outline-secondary"
+              className="bt"
+              onClick={showCheckout}
+            >
+              Cart <i class="fa-solid fa-basket-shopping"></i>
+            </Button>
           </div>
           <div>
-            <button className='bt' onClick={clearCheckout}>Clear <i class="fa-solid fa-trash"></i></button>
+            <Button
+              variant="outline-secondary"
+              className="bt"
+              onClick={clearCheckout}
+            >
+              Clear <i class="fa-solid fa-trash"></i>
+            </Button>
           </div>
         </div>
       </header>
@@ -45,7 +64,7 @@ function Header() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Favourites</Modal.Title>
+          <Modal.Title>Wishlist</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <ul>

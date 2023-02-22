@@ -6,6 +6,7 @@ import Product from "./Product";
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Carousel from "react-bootstrap/Carousel";
+import Image from "react-bootstrap/Image";
 
 function Home() {
   const [charData, setCharData] = useState(null);
@@ -32,73 +33,65 @@ function Home() {
     navigate(path);
   };
   if (charData === null) {
-    return <div className="container show-middle">Loading...</div>
+    return <div className="container show-middle">Loading...</div>;
   }
   return (
     <>
       <div className="welcome">
         <h1 id="discover">Discover new make-up with Make Up App</h1>
       </div>
-      <div>
+      <main>
         <Button variant="outline-secondary" id="search" onClick={routeChange}>
           Search for Products
         </Button>{" "}
         <p id="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non leo
-          at justo facilisis bibendum non vel erat. Quisque sed imperdiet erat,
-          laoreet tempus ante. Fusce mi augue, tempor eu eros nec, sodales
-          interdum tortor. Proin consequat dui leo, ullamcorper suscipit mauris
-          blandit vitae. Ut rutrum consectetur diam, et auctor lacus fermentum
-          nec. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-          Nulla et orci non tellus placerat hendrerit nec sit amet libero.
-          Vivamus iaculis risus sit amet porta egestas. Duis sit amet eros a mi
-          egestas accumsan sit amet quis ex. Mauris sollicitudin neque sit amet
-          metus suscipit rutrum. Duis pellentesque purus in augue congue
-          vestibulum.
+          Try something new this spring! Check out our makeup collection and add
+          your favourite products to the wishlist. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Etiam dignissim lacus vel libero egestas
+          suscipit. Cras leo est, gravida id convallis non, tempor non quam.
+          Aenean vel ante at leo euismod faucibus. Curabitur ultrices in felis
+          nec pulvinar. Nullam sed urna eu elit rutrum pellentesque et id erat.
+          Vestibulum vitae gravida leo, sed tempus turpis. Cras porta molestie
+          augue sed bibendum.
         </p>
-      </div>
-      <div>
-        <h2 id="check">Meet the Brands</h2>
-      </div>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carImg"
-            src={require("../assets/images/lip.avif")}
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>Dior</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carImg"
-            src={require("../assets/images/lip.avif")}
-            alt="Second slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carImg"
-            src={require("../assets/images/lip.avif")}
-            alt="Third slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+      </main>
+      <h2 id="brandsHeader">Meet the Brands</h2>
       <section>
+        <Carousel id="carBrand">
+          <Carousel.Item className="carouselItem">
+            <img
+              className="d-block img-fluid rounded carImg"
+              src={require("../assets/images/nyx1.jpg")}
+              alt="First slide"
+            />
+            <Carousel.Caption>
+              <h3>NYX</h3>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item className="carouselItem">
+            <img
+              className="d-block img-fluid rounded carImg"
+              src={require("../assets/images/diorNew.jpg")}
+              alt="Second slide"
+            />
+
+            <Carousel.Caption>
+              <h3>Dior</h3>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item className="carouselItem">
+            <img
+              className="d-block img-fluid rounded carImg"
+              src={require("../assets/images/maybelline2.jpg")}
+              alt="maybelline"
+            />
+
+            <Carousel.Caption>
+              <h3>Maybelline</h3>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+
         {/* {charData.map((product) => (
           <Product key={product.id} product={product} />
         ))} */}

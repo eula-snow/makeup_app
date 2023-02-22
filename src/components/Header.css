@@ -1,56 +1,53 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(240, 194, 201);
-    font-size: medium;
-    color: blueviolet;
-    height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  font-size: medium;
+  color: #d4ab9f;
+  height: 55px;
 }
 
 header h1 {
-    margin-left: 10px;
-    font-size: xx-large;
+  margin-left: 10px;
+  font-size: xx-large;
 }
 
 #home,
 #main,
 #contact {
-    color: black;
-    text-decoration: none;
-    color: blueviolet;
-    font-size: large;
+  text-decoration: none;
+  color: #6c757d;
+  font-size: large;
 }
 
-
-.bt {
-    font-size: large;
-    color: blueviolet;
-}
+/* .bt {
+  font-size: large;
+  color: #d4ab9f;
+} */
 
 #home:hover,
 #main:hover,
 #contact:hover {
-    text-decoration: underline;
-
+  text-decoration: underline;
 }
 
 .nav-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .nav-bar div,
 .nav-bar nav,
 .nav-bar nav * {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .nav-bar div:last-child {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 #logo {
-    margin-left: 2%;
+  margin-left: 2%;
 }
