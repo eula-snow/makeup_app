@@ -3,7 +3,7 @@
 ## Description
 
 This is a webpage where users can discover new makeup.
-[View](https://)
+[View](https://discover-make-up.netlify.app)
 
 ## Installation
 
@@ -14,9 +14,13 @@ N/A
 ![screenshot1](assets/images/screenshot1.png)
 ![screenshot2](assets/images/screenshot2.png)
 
+## Technolgy
+
+HTML, CSS, React.js, [Makeup API](http://makeup-api.herokuapp.com), React Bootstrap, GitHub, Netlify
+
 ## Credits
 
-N/A
+Ildiko Dutton, Mariia Konova, Nanda Nippani, Aurelia Stanculea
 
 ## License
 
