@@ -17,7 +17,7 @@ function Home() {
 
   // useEffect(() => {
   //   // fetch(
-  //   //   `http://makeup-api.herokuapp.com/api/v1/products.json?brand=${randomBrand}`
+  //   //   `https://makeup-api.herokuapp.com/api/v1/products.json?brand=${randomBrand}`
   //   // )
   //   //   .then((res) => res.json())
   //   //   .then((data) => {
