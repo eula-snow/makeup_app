@@ -25,7 +25,7 @@ function Header() {
     <div>
       <header>
         {/* <div> */}
-        <h1>Make-Up App</h1>
+        <h1>Makeup App</h1>
         {/* </div> */}
         <Navbar>
           <Container className="nav-bar">
