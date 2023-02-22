@@ -24,7 +24,7 @@ function Header() {
   return (
     <div>
       <header>
-        <h1>Make-Up App</h1>
+        <h1 id="logo">Make-Up App</h1>
         <Navbar>
           {/* <div> */}
 
@@ -46,6 +46,7 @@ function Header() {
               <Button
                 variant="outline-secondary"
                 className="bt"
+                id="cart"
                 onClick={showCheckout}
               >
                 Cart <i className="fa-solid fa-basket-shopping"></i>

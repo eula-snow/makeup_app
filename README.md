@@ -11,8 +11,8 @@ N/A
 
 ## Usage
 
-![screenshot1](assets/images/screenshot1.png)
-![screenshot2](assets/images/screenshot2.png)
+![Home page](src/assets/images/screenshot1.png)
+![Product search](src/assets/images/screenshot2.png)
 
 ## Technolgy
 

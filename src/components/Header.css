@@ -7,10 +7,10 @@ header {
   color: #d4ab9f;
 }
 
-h1 {
+#logo {
   margin-left: 10px;
   font-size: xx-large;
-  width: 500px;
+  width: 700px;
 }
 
 #home,
@@ -35,4 +35,16 @@ h1 {
 
 .bt {
   margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  #logo {
+    text-align: center;
+  }
+  #contact {
+    margin-right: 0;
+  }
+  #cart {
+    margin-left: 20px;
+  }
 }
