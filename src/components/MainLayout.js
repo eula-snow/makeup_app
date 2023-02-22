@@ -1,15 +1,15 @@
 import React from "react";
-import Footer from "./Footer";
+import { FooterComponent } from "./Footer";
 import Header from "./Header";
 
 function MainLayout() {
-    return (
-        <>
-            <Header></Header>
+  return (
+    <>
+      <Header></Header>
 
-            <Footer></Footer>
-        </>
-    );
+      <FooterComponent></FooterComponent>
+    </>
+  );
 }
 
 export default MainLayout;
