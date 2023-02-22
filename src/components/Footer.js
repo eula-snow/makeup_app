@@ -1,32 +1,39 @@
 import { useState } from "react";
 import "./Footer.css";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
 
 function Footer() {
-    return (
-        <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-                <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                </Form.Text>
-            </Form.Group>
+  return (
+    <Container>
+      <Row className="justify-content-md-center">
+        <Col md="4">
+          <Card style={{ width: "18rem" }}>
+            <Card.Body>
+              <Card.text>EMAIL: makeup_app@gmail.com</Card.text>
+            </Card.Body>
+          </Card>
+        </Col>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-                Submit
-            </Button>
-        </Form>
-    );
+        <Col md="4">
+          <Card style={{ width: "18rem" }}>
+            <Card.Body>
+              <Card.text>PHONE: 0880500500</Card.text>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md="4">
+          <Card style={{ width: "18rem" }}>
+            <Card.Body>
+              <Card.text>ADDRESS: 22 Bridge Street, London</Card.text>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
+  );
 }
 
 export default Footer;
-
