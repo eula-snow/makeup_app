@@ -42,4 +42,12 @@ code {
   .search-bar {
     font-size: larger !important;
   }
+
+  form {
+    width: 90% !important;
+  }
+
+  #cart {
+    margin-left: 0 !important;
+  }
 }

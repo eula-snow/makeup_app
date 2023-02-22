@@ -1,49 +1,56 @@
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f2f2f2;
-  font-size: medium;
-  color: #d4ab9f;
-  /* height: 55px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    font-size: medium;
+    color: #d4ab9f;
 }
 
-h1 {
-  margin-left: 10px;
-  font-size: xx-large;
+#logo {
+    margin-left: 10px;
+    font-size: xx-large;
+    width: 700px;
 }
 
 #home,
 #main,
 #contact {
-  text-decoration: none;
-  color: #6c757d;
-  font-size: large;
+    text-decoration: none;
+    color: #6c757d;
+    font-size: large;
+    margin-right: 10px;
 }
 
 #home:hover,
 #main:hover,
 #contact:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-.nav-bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.navbar {
+    width: 100%;
 }
 
-/* .nav-bar div, */
-.nav-bar nav,
-.nav-bar nav * {
-  margin-right: 20px;
+.navbar-brand {
+    margin-left: 10px;
+    font-size: 20px !important;
 }
 
-/* .nav-bar div:last-child {
-  margin-right: 10px;
-} */
+.bt {
+    margin-right: 10px;
+}
 
-#logo {
-  margin-left: 2%;
+@media (max-width: 768px) {
+    #logo {
+        text-align: center;
+    }
+
+    #contact {
+        margin-right: 0;
+    }
+
+    #cart {
+        margin-left: 20px;
+    }
 }
