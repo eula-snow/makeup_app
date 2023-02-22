@@ -14,14 +14,14 @@ const ProductGallery = (props) => {
   const filteredProducts = () => {
     let products = searchText
       ? props.productData.filter((product) =>
-        product.name.toLowerCase().includes(searchText.toLowerCase())
-      )
+          product.name.toLowerCase().includes(searchText.toLowerCase())
+        )
       : props.productData;
     products =
       props.selectedProductTypes.length > 0
         ? products.filter((item) =>
-          props.selectedProductTypes.includes(item.product_type)
-        )
+            props.selectedProductTypes.includes(item.product_type)
+          )
         : products;
     products =
       props.selectedBrands.length > 0

@@ -1,14 +1,15 @@
 header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: #f2f2f2;
   font-size: medium;
   color: #d4ab9f;
-  height: 55px;
+  /* height: 55px; */
 }
 
-header h1 {
+h1 {
   margin-left: 10px;
   font-size: xx-large;
 }
@@ -20,11 +21,6 @@ header h1 {
   color: #6c757d;
   font-size: large;
 }
-
-/* .bt {
-  font-size: large;
-  color: #d4ab9f;
-} */
 
 #home:hover,
 #main:hover,
@@ -38,15 +34,15 @@ header h1 {
   justify-content: space-between;
 }
 
-.nav-bar div,
+/* .nav-bar div, */
 .nav-bar nav,
 .nav-bar nav * {
   margin-right: 20px;
 }
 
-.nav-bar div:last-child {
+/* .nav-bar div:last-child {
   margin-right: 10px;
-}
+} */
 
 #logo {
   margin-left: 2%;

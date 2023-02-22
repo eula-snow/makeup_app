@@ -2,7 +2,10 @@ import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
 import "./Header.css";
+
 function Header() {
   const [listOfProductNames, setListOfProductNames] = useState([]);
   const [show, setShow] = useState(false);
@@ -21,40 +24,44 @@ function Header() {
   return (
     <div>
       <header>
-        <div>
-          <h1>Make-Up App</h1>
-        </div>
-        <div className="nav-bar">
-          <nav>
-            <NavLink id="home" to="/">
-              Home
-            </NavLink>
-            <NavLink id="main" to="/Main">
-              Main
-            </NavLink>
-            <NavLink id="contact" to="/contact">
-              Contact
-            </NavLink>
-          </nav>
-          <div>
-            <Button
-              variant="outline-secondary"
-              className="bt"
-              onClick={showCheckout}
-            >
-              Cart <i class="fa-solid fa-basket-shopping"></i>
-            </Button>
-          </div>
-          <div>
-            <Button
-              variant="outline-secondary"
-              className="bt"
-              onClick={clearCheckout}
-            >
-              Clear <i class="fa-solid fa-trash"></i>
-            </Button>
-          </div>
-        </div>
+        {/* <div> */}
+        <h1>Make-Up App</h1>
+        {/* </div> */}
+        <Navbar>
+          <Container className="nav-bar">
+            {/* <Navbar.Brand id="title">MakeUP A</Navbar.Brand> */}
+            {/* <div> */}
+            <nav>
+              <NavLink id="home" to="/">
+                Home
+              </NavLink>
+              <NavLink id="main" to="/Main">
+                Main
+              </NavLink>
+              <NavLink id="contact" to="/contact">
+                Contact
+              </NavLink>
+              <Button
+                variant="outline-secondary"
+                className="bt"
+                onClick={showCheckout}
+              >
+                Cart <i className="fa-solid fa-basket-shopping"></i>
+              </Button>
+              <Button
+                variant="outline-secondary"
+                className="bt"
+                onClick={clearCheckout}
+              >
+                Clear <i className="fa-solid fa-trash"></i>
+              </Button>
+            </nav>
+            {/* <div> */}
+
+            {/* </div> */}
+            {/* </div> */}
+          </Container>
+        </Navbar>
       </header>
       <Modal
         show={show}
