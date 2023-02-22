@@ -24,13 +24,15 @@ function Header() {
   return (
     <div>
       <header>
-        {/* <div> */}
-        <h1>Make-Up App</h1>
-        {/* </div> */}
+        <h1 id="logo">Make-Up App</h1>
         <Navbar>
+          {/* <div> */}
+
+          {/* </div> */}
           <Container className="nav-bar">
             {/* <Navbar.Brand id="title">MakeUP A</Navbar.Brand> */}
             {/* <div> */}
+
             <nav>
               <NavLink id="home" to="/">
                 Home
@@ -44,6 +46,7 @@ function Header() {
               <Button
                 variant="outline-secondary"
                 className="bt"
+                id="cart"
                 onClick={showCheckout}
               >
                 Cart <i className="fa-solid fa-basket-shopping"></i>
