@@ -20,7 +20,7 @@ const Product = (props) => {
       <div className="product-name">{props.product.name}</div>
       <div className="product-info">
         <div>Brand: {props.product.brand}</div>
-        <div>Product Type: {props.product.product_type}</div>
+        <div>Product: {props.product.product_type}</div>
       </div>
       <div>
         <img
@@ -40,7 +40,7 @@ const Product = (props) => {
         </a>
         <div>
           <span className="product-price">£{props.product.price}</span>
-          <button onClick={checkout}>Buy</button>
+          <button onClick={checkout}>Add</button>
         </div>
       </div>
     </div>

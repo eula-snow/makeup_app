@@ -10,44 +10,46 @@
 #discover {
   padding-top: 300px;
   text-align: center;
+  color: #f2f2f2;
 }
 
 #description {
   margin: 0 50px;
+  color: #6c757d;
 }
 
 #search {
   display: block;
-  margin: 40px auto;
+  margin: 30px auto;
   padding: 10px;
 }
 
-#check {
+#brandsHeader {
   text-align: center;
   display: block;
   margin: 30px auto;
+  color: #d4ab9f;
 }
 
 section {
   display: flex;
 }
 
-/* section .product div {
-  padding: 10px 20px;
-  text-align: center;
+.carImg {
+  height: 400px;
+  margin: 0 auto;
 }
 
-section .product {
-  margin: 0 20px 20px;
-}
-
-section img {
-  width: 300px;
-  height: auto;
+.carouselItem {
   display: block;
   margin: 0 auto;
-} */
+}
 
-.carImg {
-  height: 300px;
+section {
+  background-color: #f2f2f2;
+}
+#carBrand {
+  /* margin: 0 100px; */
+  /* background-color: #a5a2ab; */
+  margin: 0 auto;
 }
