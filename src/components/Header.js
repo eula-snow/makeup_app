@@ -24,13 +24,15 @@ function Header() {
   return (
     <div>
       <header>
-        {/* <div> */}
         <h1>Make-Up App</h1>
-        {/* </div> */}
         <Navbar>
+          {/* <div> */}
+
+          {/* </div> */}
           <Container className="nav-bar">
             {/* <Navbar.Brand id="title">MakeUP A</Navbar.Brand> */}
             {/* <div> */}
+
             <nav>
               <NavLink id="home" to="/">
                 Home
