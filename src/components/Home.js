@@ -9,32 +9,32 @@ import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
 
 function Home() {
-  const [charData, setCharData] = useState(null);
-  const [listItems, setListItems] = useState(null);
+  // const [charData, setCharData] = useState(null);
+  // const [listItems, setListItems] = useState(null);
 
-  const brands = ["nyx", "maybelline", "dior", "glossier", "l'oreal"];
-  let randomBrand = brands[Math.floor(Math.random() * brands.length)];
+  // const brands = ["nyx", "maybelline", "dior", "glossier", "l'oreal"];
+  // let randomBrand = brands[Math.floor(Math.random() * brands.length)];
 
-  useEffect(() => {
-    fetch(
-      `http://makeup-api.herokuapp.com/api/v1/products.json?brand=${randomBrand}`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        let info = data.slice(0, 4);
-        setCharData(info);
-        console.log(info);
-      });
-  }, []);
+  // useEffect(() => {
+  //   // fetch(
+  //   //   `http://makeup-api.herokuapp.com/api/v1/products.json?brand=${randomBrand}`
+  //   // )
+  //   //   .then((res) => res.json())
+  //   //   .then((data) => {
+  //   //     let info = data.slice(0, 4);
+  //   //     setCharData(info);
+  //   //     console.log(info);
+  //   // });
+  // }, []);
 
   let navigate = useNavigate();
   const routeChange = () => {
     let path = `./main`;
     navigate(path);
   };
-  if (charData === null) {
-    return <div className="container show-middle">Loading...</div>;
-  }
+  // if (charData === null) {
+  //   return <div className="container show-middle">Loading...</div>;
+  // }
   return (
     <>
       <div className="welcome">

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Product.css";
+import Button from "react-bootstrap/Button";
 
 const Product = (props) => {
   const fallbackImage = "/logo192.png";
@@ -19,8 +20,8 @@ const Product = (props) => {
     <div className="product">
       <div className="product-name">{props.product.name}</div>
       <div className="product-info">
-        <div>Brand: {props.product.brand}</div>
-        <div>Product: {props.product.product_type}</div>
+        <div id="brandName">{props.product.brand.toUpperCase()}</div>
+        {/* <div>Product: {props.product.product_type}</div> */}
       </div>
       <div>
         <img
@@ -40,7 +41,9 @@ const Product = (props) => {
         </a>
         <div>
           <span className="product-price">£{props.product.price}</span>
-          <button onClick={checkout}>Add</button>
+          <Button variant="outline-secondary" onClick={checkout}>
+            Add
+          </Button>
         </div>
       </div>
     </div>
