@@ -37,6 +37,13 @@ header {
     font-size: 20px !important;
 }
 
+a {
+    padding-top: 4px !important;
+    padding-right: 10px;
+    color: slategray !important;
+    text-decoration: none !important;
+}
+
 .bt {
     margin-right: 10px;
 }
