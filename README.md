@@ -16,6 +16,12 @@ Introducing our revolutionary make-up app that simplifies your beauty routine! W
 ![Home page](src/assets/images/screenshot1.png)
 ![Product search](src/assets/images/screenshot2.png)
 
+## URL of Deployed Application
+https://discover-make-up.netlify.app
+
+## URL of Github repository that contains application code
+https://github.com/eula-snow/makeup_app
+
 ## Technolgy
 
 HTML, CSS, React.js, [Makeup API](http://makeup-api.herokuapp.com), React Bootstrap, GitHub, Netlify
