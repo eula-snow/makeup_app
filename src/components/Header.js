@@ -38,9 +38,9 @@ function Header() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav className="ml-auto" style={styles.hc}>
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/main">Products</Nav.Link>
-              <Nav.Link href="/Contact">Contact</Nav.Link>
+              <NavLink to="/">Home</NavLink>
+              <NavLink to="/main">Products</NavLink>
+              <NavLink to="/Contact">Contact</NavLink>
               <Button
                 variant="outline-secondary"
                 className="bt"
