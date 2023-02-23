@@ -1,10 +1,19 @@
 import { Link, NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
+import { Navbar, Nav } from "react-bootstrap";
 import "./Header.css";
+
+const styles = {
+  bg: {
+    backgroundColor: '#555',
+  },
+  hc: {
+    color: 'black',
+  }
+}
 
 function Header() {
   const [listOfProductNames, setListOfProductNames] = useState([]);
@@ -24,47 +33,31 @@ function Header() {
   return (
     <div>
       <header>
-        <h1 id="logo">Make-Up App</h1>
-        <Navbar>
-          {/* <div> */}
-
-          {/* </div> */}
-          <Container className="nav-bar">
-            {/* <Navbar.Brand id="title">MakeUP A</Navbar.Brand> */}
-            {/* <div> */}
-
-            <nav>
-              <NavLink id="home" to="/">
-                Home
-              </NavLink>
-              <NavLink id="main" to="/Main">
-                Products
-              </NavLink>
-              <NavLink id="contact" to="/contact">
-                Contact
-              </NavLink>
+        <Navbar bg="light" expand="lg">
+          <Navbar.Brand href="/">Makeup App</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+            <Nav className="ml-auto" style={styles.hc}>
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/main">Products</Nav.Link>
+              <Nav.Link href="/Contact">Contact</Nav.Link>
               <Button
                 variant="outline-secondary"
                 className="bt"
                 id="cart"
-                onClick={showCheckout}
-              >
+                onClick={showCheckout}>
                 Cart <i className="fa-solid fa-basket-shopping"></i>
               </Button>
               <Button
                 variant="outline-secondary"
                 className="bt"
-                onClick={clearCheckout}
-              >
+                onClick={clearCheckout}>
                 Clear <i className="fa-solid fa-trash"></i>
               </Button>
-            </nav>
-            {/* <div> */}
-
-            {/* </div> */}
-            {/* </div> */}
-          </Container>
+            </Nav>
+          </Navbar.Collapse>
         </Navbar>
+
       </header>
       <Modal
         show={show}

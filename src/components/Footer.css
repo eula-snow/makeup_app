@@ -1,16 +1,10 @@
-.email,
-.phone,
-.address {
-    padding: 1rem;
+.row {
+    margin-left: 40px;
 }
-
-
 
 .col-md-4 {
     padding: 1rem;
 }
-
-
 
 .social-links a {
     width: 30px;
@@ -22,15 +16,17 @@
     align-items: center;
 }
 
-
-
-.social-links {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 15px;
+.card {
+    border: 0 !important;
     text-align: center;
 }
 
+.card-footer {
+    background-color: #fff !important;
+    border-top: 0 !important;
+    text-align: center;
+    font-size: xx-large;
+}
 
 
 .fa-twitter {
